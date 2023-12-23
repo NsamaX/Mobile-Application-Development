@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Lab2',
       theme: ThemeData(
         // This is the theme of your application.
@@ -49,7 +50,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final List<Map<String, String>> images = [
     {
-      'url': 'images/girl_with_a_pearl_earring.jpg',
+      'url': 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/1665_Girl_with_a_Pearl_Earring.jpg/800px-1665_Girl_with_a_Pearl_Earring.jpg',
       'description': 
       """
       Girl With A Pearl Earring 
@@ -65,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ,
     },
     {
-      'url': 'images/mona_lisa.jpg',
+      'url': 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/640px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg',
       'description': 
       """
       Mona Lisa 
@@ -82,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ,
     },
     {
-      'url': 'images/the_creation_of_adam.jpg',
+      'url': 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg/1200px-Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg',
       'description': 
       """
       The Creation of Adam 
