@@ -85,7 +85,7 @@ class _HomePageState extends State<HomePage> {
                 keyboardType: TextInputType.text,
               ),
             ),
-            Text('ระบุระเภเว็เลว*', style: textTheme.titleMedium),
+            Text('ระบุประเภทเว็ปเลว*', style: textTheme.titleMedium),
             Expanded(
               child: ListView.builder(
                 itemCount: _misfortunes.length,
@@ -146,8 +146,6 @@ class _HomePageState extends State<HomePage> {
 
       // Extract the values
       int id = response['insertItem']['id'];
-      String url = response['insertItem']['url'];
-      String type = response['insertItem']['type'];
       List<dynamic> summary = response['summary'];
 
       // Show dialog with extracted values
@@ -173,7 +171,10 @@ class _HomePageState extends State<HomePage> {
                   children: counts.map((countItem) {
                     return Row(
                       children: [
-                        Icon(Icons.collections),
+                        Icon(
+                          Icons.check_box,
+                          color: Colors.green,
+                        ),
                         SizedBox(width: 8.0),
                         Text('${countItem['title']}: ${countItem['count']}'),
                       ],
